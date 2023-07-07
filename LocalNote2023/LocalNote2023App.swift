@@ -11,7 +11,16 @@ import SwiftUI
 struct LocalNote2023App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                ContentView()
+                    .tabItem {
+                        Label("Map", systemImage: "globe")
+                    }
+                OverviewView()
+                    .tabItem {
+                        Label("Overview", systemImage: "list.clipboard")
+                    }
+            }
         }
     }
 }

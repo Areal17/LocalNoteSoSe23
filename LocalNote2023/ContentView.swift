@@ -28,12 +28,14 @@ struct ContentView: View {
                 .resizable()
                 .frame(width: 44, height: 44)
                 .foregroundColor(addable == true ? .blue : .gray)
+                .padding(.top)
                 .onTapGesture() {
                     if addable {
                         showSheet = true
                     }
                     addable.toggle()
                 }
+            Spacer()
         }
         .sheet(isPresented: $showSheet) {
             Text("Show Sheet")
