@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct HeadlineView: View {
+    var titleText: String
     var body: some View {
         HStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.black)
-            Text("LocalNote")
+            Text(titleText)
                 .font(.title)
         }
         .padding(.horizontal)
@@ -23,7 +24,8 @@ struct HeadlineView: View {
 }
 
 struct HeadlineView_Previews: PreviewProvider {
+    static let title = "Local"
     static var previews: some View {
-        HeadlineView()
+        HeadlineView(titleText: title)
     }
 }

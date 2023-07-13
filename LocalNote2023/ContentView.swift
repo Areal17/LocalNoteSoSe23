@@ -16,7 +16,7 @@ struct ContentView: View {
     @State var coordinateRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 52.457878, longitude: 13.526298), latitudinalMeters: 100, longitudinalMeters: 100)
     var body: some View {
         VStack {
-            HeadlineView()
+            HeadlineView(titleText: "LocalNote")
             .padding()
 //            Spacer()
             Map(coordinateRegion: $coordinateRegion)
